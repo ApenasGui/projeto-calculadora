@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css"
+
+</head>
+<body>
+    <header>
+        <h1>Calculadora Simples</h1>
+    </header>
+    <section>
+        <div>
+            Digite os números para realizar as operações
+        </div>
+        <div>
+            <input type="number" id="num1" placeholder="Primeiro número">
+            <input type='number' id="num2" placeholder="Segundo número">
+            <p> Resposta: <span id="resultado"> 0 </span></p>
+            <button onclick='somar()'> + </button>
+            <button onclick='dividir()'> / </button>
+            <button onclick='subtrair()'> - </button>
+            <button onclick='multiplicar()'> x </button>
+            <button onclick='porcento()'> % </button>
+            <button onclick='limpar()'> AC </button>
+        
+            <script>
+                function somar() {
+                    let n1 = Number(document.getElementById('num1').value)
+                    let n2 = Number(document.getElementById('num2').value)
+                    document.getElementById('resultado').textContent = n1 + n2
+                }
+                function dividir() {
+                    let n1 = Number(document.getElementById('num1').value)
+                    let n2 = Number(document.getElementById('num2').value)
+                    document.getElementById('resultado').textContent = n1 / n2
+                }
+                function subtrair() {
+                    let n1 = Number(document.getElementById('num1').value)
+                    let n2 = Number(document.getElementById('num2').value)
+                    document.getElementById('resultado').textContent = n1 - n2
+                }
+                function multiplicar() {
+                    let n1 = Number(document.getElementById('num1').value)
+                    let n2 = Number(document.getElementById('num2').value)
+                    document.getElementById('resultado').textContent = n1 * n2
+                }
+                function porcento() {
+                    let n1 = Number(document.getElementById('num1').value)
+                    let n2 = Number(document.getElementById('num2').value)
+                    document.getElementById('resultado').textContent = (n1/n2)*100
+                }
+                function limpar(){
+                    document.getElementById('num1').value = 'Primeiro número'
+                    document.getElementById('num2').value = 'Segundo número'
+                    document.getElementById('resultado').textContent = '0'
+                }
+            </script>
+        </div>
+    </section>
+    <footer>
+        <p>&copy GuiApenas</p>
+    </footer>
+</body>
+</html>
